@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Attempting to access a non-existent attribute
+    let text = document.getElementById("myDiv").getAttribute("nonExistentAttribute");
+    console.log(text); // Outputs null
+
+    // Attempting to use a method on a null value
+    let length = text.length; // Throws an error because text is null
+  </script>
+</body>
+</html>
