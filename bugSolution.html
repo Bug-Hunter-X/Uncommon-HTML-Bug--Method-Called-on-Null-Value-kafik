@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    let text = document.getElementById("myDiv").getAttribute("nonExistentAttribute");
+
+    // Check if text is null before accessing its properties
+    if (text !== null) {
+      let length = text.length;
+      console.log(length); 
+    } else {
+      console.log("Attribute not found or value is null");
+    }
+  </script>
+</body>
+</html>
